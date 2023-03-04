@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032486953566",
+    "project_id": "sticker-chat-1b0ee",
+    "storage_bucket": "sticker-chat-1b0ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032486953566:android:e834784460c4b16bd3cacf",
+        "android_client_info": {
+          "package_name": "edu.northeastern.a7team45"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032486953566-ord957lbltts6m7fadkmlps8iqqp5rga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALv9ZwRCNF32VNHTM75G2TK7tkHJiPLS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032486953566-ord957lbltts6m7fadkmlps8iqqp5rga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

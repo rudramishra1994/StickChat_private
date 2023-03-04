@@ -15,6 +15,9 @@
         android:theme="@style/Theme.A7Team45"
         tools:targetApi="31">
         <activity
+            android:name=".AppUsers"
+            android:exported="false" />
+        <activity
             android:name=".StickChatHome"
             android:exported="false" />
         <activity

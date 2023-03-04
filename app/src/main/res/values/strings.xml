@@ -7,6 +7,9 @@
     <string name="search_hint">Title</string>
     <string name="year_hint">Year</string>
 
+    <string name="sent">Sticker Sent</string>
+    <string name="receive">Sticker Received</string>
+
 
     <string name="rudra">Rudra Mohan Mishra</string>
     <string name="nayana">Nayana Hugar</string>
