@@ -83,7 +83,7 @@ public class ServiceActivity extends AppCompatActivity {
         searchEditYear = findViewById(R.id.year_search);
 
 
-        movieListRecyclerView = findViewById(R.id.recycler_view);
+        movieListRecyclerView = findViewById(R.id.appusersview);
         searchButton = findViewById(R.id.search_button);
 
         if(savedInstanceState!=null){

@@ -19,7 +19,7 @@ import java.net.URL;
 public class ActivityUtils {
     public static void hideSoftKeyboard(Activity activity) {
         InputMethodManager inputMethodManager = (InputMethodManager)  activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        if(activity.getCurrentFocus()!=null)
+        if(activity.getCurrentFocus()!=null && activity.getCurrentFocus().getWindowToken()!=null)
             inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
     static public boolean isNetworkAvailable(Context c) {
