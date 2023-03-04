@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main.appbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/main_collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/main_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:transitionName="poster"
+                app:layout_collapseMode="parallax" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_gravity="bottom"
+                android:layout_alignBottom="@+id/main_backdrop"
+                android:background="@drawable/photo_background_protection"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:useDefaultMargins="true"
+            android:layout_height="match_parent"
+             android:columnCount="2">
+            <TextView
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="@string/title"
+                style="@style/left_column_bold" />
+
+            <TextView
+                android:id="@+id/grid_title"
+                style="@style/right_column_normal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:text="@string/example_title" />
+            <TextView
+                style="@style/left_column_bold"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="@string/released" />
+            <TextView
+                style="@style/right_column_normal"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                tools:text="@string/example_release"
+                android:id="@+id/grid_released" />
+            <TextView
+                style="@style/left_column_bold"
+                android:text="@string/runtime"
+                android:layout_column="0"
+                android:layout_row="2" />
+            <TextView
+                style="@style/right_column_normal"
+                tools:text="@string/example_runtime"
+                android:layout_column="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_row="2"
+                android:id="@+id/grid_runtime" />
+            <TextView
+                android:text="@string/director"
+                android:layout_column="0"
+                android:layout_row="3"
+                style="@style/left_column_bold" />
+            <TextView
+                style="@style/right_column_normal"
+                tools:text="@string/example_director"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:id="@+id/grid_director" />
+            <TextView
+                style="@style/left_column_bold"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:text="@string/Genre" />
+            <TextView
+                style="@style/right_column_normal"
+                android:layout_column="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_row="4"
+                tools:text="@string/example_genre"
+                android:id="@+id/grid_genre" />
+            <TextView
+                style="@style/left_column_bold"
+                android:text="@string/Writer"
+                android:layout_column="0"
+                android:layout_row="5" />
+            <TextView
+                style="@style/right_column_normal"
+                android:layout_column="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_row="5"
+                tools:text="@string/example_writer"
+                android:id="@+id/grid_writers" />
+            <TextView
+                style="@style/left_column_bold"
+                android:text="@string/actors"
+                android:layout_column="0"
+                android:layout_row="6" />
+            <TextView
+                style="@style/right_column_normal"
+                android:layout_column="1"
+                android:layout_row="6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="300dp"
+                tools:text="@string/example_actors"
+                android:id="@+id/grid_actors" />
+            <TextView
+                android:layout_column="0"
+                android:layout_row="7"
+                style="@style/left_column_bold"
+                android:text="@string/plot" />
+
+            <TextView
+                android:id="@+id/grid_plot"
+                style="@style/right_column_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="7"
+                android:layout_column="1"
+                android:maxWidth="300dp"
+                tools:text="@string/example_full_plot" />
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
