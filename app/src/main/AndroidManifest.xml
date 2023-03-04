@@ -15,6 +15,9 @@
         android:theme="@style/Theme.A7Team45"
         tools:targetApi="31">
         <activity
+            android:name=".SendSticker"
+            android:exported="false" />
+        <activity
             android:name=".AppUsers"
             android:exported="false" />
         <activity
@@ -43,7 +46,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".DetailViewActivity"
@@ -55,7 +57,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

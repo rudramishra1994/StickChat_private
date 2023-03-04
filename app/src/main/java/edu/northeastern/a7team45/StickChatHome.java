@@ -2,8 +2,10 @@ package edu.northeastern.a7team45;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.northeastern.a7team45.firebase.model.User;
+import edu.northeastern.a7team45.stickerchathome.UserRecyclerViewAdapter;
 
 public class StickChatHome extends AppCompatActivity {
 
@@ -37,7 +40,18 @@ public class StickChatHome extends AppCompatActivity {
         addUserToTheDatabase(currentUser);
         allUsers = new ArrayList<>();
 
-        appUsersView = findViewById(R.id.appusersview);
+        appUsersView = findViewById(R.id.appuserrecyclerview);
+        appUsersView.setLayoutManager(new LinearLayoutManager(this));
+        appUsersView.setAdapter(new UserRecyclerViewAdapter(allUsers, this, new UserRecyclerViewAdapter.ItemClickListener() {
+            @Override
+            public void onItemClick(User user) {
+                Intent intent = new Intent(StickChatHome.this, SendSticker.class);
+                // Pass data object in the bundle and populate details activity.
+                intent.putExtra("receiver", user.getUsername());
+                intent.putExtra("sender", currentUser.getUsername());
+                startActivity(intent);
+            }
+        }));
 
         mUsers.addValueEventListener(new ValueEventListener() {
             @Override
@@ -49,7 +63,7 @@ public class StickChatHome extends AppCompatActivity {
                         allUsers.add(user);
                     }
                 }
-                //adapterRecyclerView.notifyDataSetChanged();
+                appUsersView.getAdapter().notifyDataSetChanged();
             }
 
             @Override

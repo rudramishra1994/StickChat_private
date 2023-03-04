@@ -111,7 +111,7 @@
             android:indeterminate="true"
             android:visibility="gone" />
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/appusersview"
+            android:id="@+id/recycler_view"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
