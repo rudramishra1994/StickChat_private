@@ -28,10 +28,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button serviceButton = findViewById(R.id.service);
+        Button stickerShare = findViewById(R.id.stickchat);
+        Button about = findViewById(R.id.aboutteam45);
         serviceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent serviceIntent = new Intent(MainActivity.this, ServiceActivity.class);
+                startActivity(serviceIntent);
+            }
+        });
+        stickerShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent serviceIntent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(serviceIntent);
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent serviceIntent = new Intent(MainActivity.this, AboutTeam.class);
                 startActivity(serviceIntent);
             }
         });

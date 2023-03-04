@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">A7Team45</string>
-    <string name = "button_service">At your Service</string>
+    <string name="button_service">At your Service</string>
     <string name="search_button">Search</string>
     <string name="reset_button">Reset</string>
 
     <string name="search_hint">Title</string>
     <string name="year_hint">Year</string>
+
+
+    <string name="rudra">Rudra Mohan Mishra</string>
+    <string name="nayana">Nayana Hugar</string>
+    <string name="abhi">Abhi Achalla</string>
+    <string name="teamname">Team 45</string>
+
 
     <string-array name="dropdown_items">
         <item>Movie</item>
