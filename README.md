@@ -1,0 +1,2 @@
+# StickChat
+Sticker sharing application
