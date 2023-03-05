@@ -62,7 +62,7 @@ public class SendStickerAdapter extends  RecyclerView.Adapter<SendStickerAdapter
 
     public static class SendStickerHolder extends RecyclerView.ViewHolder{
 
-        public TextView send;
+
         public ImageView sticker;
 
 
@@ -70,7 +70,7 @@ public class SendStickerAdapter extends  RecyclerView.Adapter<SendStickerAdapter
         public SendStickerHolder(View view) {
             super(view);
             sticker = view.findViewById(R.id.sticker);
-            send = view.findViewById(R.id.sendsticker);
+
         }
     }
 

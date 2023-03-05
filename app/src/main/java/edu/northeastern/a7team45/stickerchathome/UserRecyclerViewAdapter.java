@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,8 +42,11 @@ public class UserRecyclerViewAdapter  extends RecyclerView.Adapter<UserRecyclerV
 
         final User user = userList.get(position);
         holder.username.setText(user.getUsername());
-        holder.itemView.setOnClickListener(view -> {
-            itemClickListener.onItemClick(userList.get(position));
+        holder.sendSticker.setOnClickListener(view -> {
+            itemClickListener.onSendStickerButtonClick(userList.get(position));
+        });
+        holder.chatHistory.setOnClickListener(view -> {
+            itemClickListener.onChatHistoryButtonClick(user);
         });
     }
 
@@ -59,12 +63,18 @@ public class UserRecyclerViewAdapter  extends RecyclerView.Adapter<UserRecyclerV
         public TextView username;
         public ImageView persona;
 
+        public Button chatHistory;
+
+        public Button sendSticker;
+
 
 
         public UserViewHolder(View view) {
             super(view);
             persona = view.findViewById(R.id.userpersona);
             username = view.findViewById(R.id.usernameinappuseritem);
+            sendSticker = view.findViewById(R.id.sendstickerbutton);
+            chatHistory = view.findViewById(R.id.chathistorybutton);
         }
     }
 
@@ -76,7 +86,8 @@ public class UserRecyclerViewAdapter  extends RecyclerView.Adapter<UserRecyclerV
 
 
     public interface ItemClickListener{
-        void onItemClick(User user);
+        void onSendStickerButtonClick(User user);
+        void onChatHistoryButtonClick(User user);
     }
 
 }
