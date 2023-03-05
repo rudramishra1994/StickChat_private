@@ -32,16 +32,19 @@ public class StickerCounterAdapter extends RecyclerView.Adapter<StickerCounterAd
     @Override
     public StickerCounterAdapter.StickerFrequncyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.sendstickertouseritem, parent, false);
+                .inflate(R.layout.stickerstatisticitems, parent, false);
         return new StickerCounterAdapter.StickerFrequncyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull StickerCounterAdapter.StickerFrequncyViewHolder holder, int position) {
        String stickerName = stickers.get(position);
-       int frequency = stickerFrequncy.get(stickerName);
        holder.sentSticker.setImageResource(stickerMapping.get(stickerName));
-       holder.counter.setText(frequency);
+       if(stickerFrequncy.get(stickerName)!=null){
+           holder.counter.setText(stickerFrequncy.get(stickerName).toString());
+       }else{
+           holder.counter.setText("0");
+       }
     }
 
 
