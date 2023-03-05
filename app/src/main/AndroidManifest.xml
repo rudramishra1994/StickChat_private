@@ -18,7 +18,7 @@
             android:name=".SendSticker"
             android:exported="false" />
         <activity
-            android:name=".AppUsers"
+            android:name=".ChatHistoryActivity"
             android:exported="false" />
         <activity
             android:name=".StickChatHome"

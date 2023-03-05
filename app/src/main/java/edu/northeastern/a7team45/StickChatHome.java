@@ -56,7 +56,7 @@ public class StickChatHome extends AppCompatActivity {
 
             @Override
             public void onChatHistoryButtonClick(User user) {
-                Intent intent = new Intent(StickChatHome.this, SendSticker.class);
+                Intent intent = new Intent(StickChatHome.this, ChatHistoryActivity.class);
                 // Pass data object in the bundle and populate details activity.
                 intent.putExtra("receiver", user.getUsername());
                 intent.putExtra("sender", currentUser.getUsername());
