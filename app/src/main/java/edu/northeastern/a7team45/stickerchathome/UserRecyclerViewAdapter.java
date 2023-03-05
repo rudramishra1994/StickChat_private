@@ -57,13 +57,13 @@ public class UserRecyclerViewAdapter  extends RecyclerView.Adapter<UserRecyclerV
     public static class UserViewHolder extends RecyclerView.ViewHolder{
 
         public TextView username;
-        public ImageView mThumbImageView;
+        public ImageView persona;
 
 
 
         public UserViewHolder(View view) {
             super(view);
-            mThumbImageView = view.findViewById(R.id.sticker);
+            persona = view.findViewById(R.id.userpersona);
             username = view.findViewById(R.id.usernameinappuseritem);
         }
     }
