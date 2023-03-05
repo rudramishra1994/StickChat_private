@@ -15,6 +15,9 @@
         android:theme="@style/Theme.A7Team45"
         tools:targetApi="31">
         <activity
+            android:name=".StickerCounterActivity"
+            android:exported="false" />
+        <activity
             android:name=".SendSticker"
             android:exported="false" />
         <activity

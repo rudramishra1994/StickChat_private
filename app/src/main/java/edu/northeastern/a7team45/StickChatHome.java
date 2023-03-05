@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -93,5 +96,27 @@ public class StickChatHome extends AppCompatActivity {
         }
     }
 
+    private void navigateToStickerCounterActivity(){
+        Intent intent = new Intent(StickChatHome.this, StickerCounterActivity.class);
+        // Pass data object in the bundle and populate details activity.
+        intent.putExtra("loggedinuser", currentUser.getUsername());
+        startActivity(intent);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.menusentitem: navigateToStickerCounterActivity();
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.stickchatmenu,menu);
+        return true;
+    }
 }
