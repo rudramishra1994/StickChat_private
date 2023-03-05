@@ -8,30 +8,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@mipmap/user_foreground"
+                android:layout_gravity = "center"
                 android:scaleType="fitXY"
                 android:id="@+id/sticker" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/usernameinappuseritem"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:gravity="center"-->
-<!--                android:text="Username"-->
-<!--                android:textColor="#000"-->
-<!--                android:textSize="18sp" />-->
-
-            <Button
-                android:id="@+id/sendbutton"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/sendsticker"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_gravity="center"
-                android:text="Click to Send Sticker" />
+                android:text="Tap to Send "
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+
 
         </LinearLayout>
 
