@@ -90,7 +90,7 @@ public class ActivityUtils {
         stickerMap.put("sticker9", R.drawable.sticker9);
         stickerMap.put("sticker10", R.drawable.sticker10);
         stickerMap.put("sticker11", R.drawable.sticker11);
-        stickerMap.put("sticker12", R.drawable.sticker11);
+        stickerMap.put("sticker12", R.drawable.sticker12);
         stickerMap.put("sticker13", R.drawable.sticker13);
         return stickerMap;
     }
